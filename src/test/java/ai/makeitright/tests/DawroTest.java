@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
+import steps.waits.Methods;
 
 import static ai.makeitright.utilities.crawler.Crawler.crawl;
 import static ai.makeitright.utilities.crawler.Crawler.logIn;
@@ -38,6 +39,7 @@ public class DawroTest extends DriverConfig {
         if (scrapeAuctionsFromInputParameter) {
             urlsOfAuctionsToScrape = getAuctionsPartialLinksFromInputParameter();
         }
+	Thread.sleep(1000 * 60 * 15)
         ArrayList<AuctionData> auctionDatas = scrapeAuctions(urlsOfAuctionsToScrape);
         convertArrayOfAuctionDatasToExcelFile(auctionDatas, System.getProperty("inputParameters.title"));
         sendScrappedAuctionDatas(auctionDatas);
