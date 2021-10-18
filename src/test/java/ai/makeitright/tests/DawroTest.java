@@ -39,7 +39,7 @@ public class DawroTest extends DriverConfig {
         if (scrapeAuctionsFromInputParameter) {
             urlsOfAuctionsToScrape = getAuctionsPartialLinksFromInputParameter();
         }
-	Thread.sleep(1000 * 60 * 15)
+	Thread.sleep(1000 * 60 * 15);
         ArrayList<AuctionData> auctionDatas = scrapeAuctions(urlsOfAuctionsToScrape);
         convertArrayOfAuctionDatasToExcelFile(auctionDatas, System.getProperty("inputParameters.title"));
         sendScrappedAuctionDatas(auctionDatas);
