@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
-import steps.waits.Methods;
 
 import static ai.makeitright.utilities.crawler.Crawler.crawl;
 import static ai.makeitright.utilities.crawler.Crawler.logIn;
